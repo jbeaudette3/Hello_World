@@ -2,9 +2,11 @@
 Testing automating upload schedule to write "Hello World" in contribution chart.  
 My hope is I don't get banned or anything like that. Just trying to learn.
 
-2025.04.01 update/ documentation:
-- created 'main' file as a simple housing of the python code, it's not formatted 'properly' but it works in a jupyter notebook
+2025.04.26:
+ - added requirements.txt
+ - created test_1.py
+ - got weather_data_dict.json to update as expected
 
-
-ToDo:
-- Create YAML file to run via GitHub Actions
+Next:
+ - turn action from on request to crontab (2x a day with 12 hour delay?)
+ - read list of pattern, pop from list, update
