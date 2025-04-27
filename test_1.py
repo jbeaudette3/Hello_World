@@ -10,6 +10,8 @@ import os
 
 API_KEY = os.environ['API_KEY']
 
+file_name = 'weather_data_dict.json'
+
 auth = Auth.Token(API_KEY)
 g = Github(auth=auth)
 
