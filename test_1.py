@@ -1,3 +1,8 @@
+import json
+import pandas as pd
+import requests
+import os
+
 API_KEY = os.environ['API_KEY']
 
 auth = Auth.Token(API_KEY)
