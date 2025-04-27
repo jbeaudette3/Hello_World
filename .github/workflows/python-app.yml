@@ -2,7 +2,7 @@ name: print 'hello world'
 
 on:
   schedule:
-    - cron: '10 8,12,16 * * *'
+    - cron: '10 14,18,22 * * *'
 
 jobs:
   build:
