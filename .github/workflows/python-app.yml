@@ -1,7 +1,8 @@
 name: print 'hello world'
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '10 8,12,16 * * *'
 
 jobs:
   build:
