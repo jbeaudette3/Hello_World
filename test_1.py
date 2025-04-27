@@ -11,6 +11,7 @@ import os
 API_KEY = os.environ['API_KEY']
 
 file_name = 'weather_data_dict.json'
+git_url = 'https://raw.githubusercontent.com/jbeaudette3/Hello_World/refs/heads/main/' + file_name
 
 auth = Auth.Token(API_KEY)
 g = Github(auth=auth)
