@@ -1,9 +1,10 @@
 name: print 'hello world'
 
 on:
-  workflow_dispatch
-# commenting out for now
-#  schedule:
+# workflow_dispatch
+# commenting out for now; uses UTC time
+  schedule:
+     - cron: '30 23 * * *'
 #    - cron: '10 14 * * *'
 #    - cron: '10 18 * * *'
 #    - cron: '10 22 * * *'
