@@ -5,6 +5,7 @@ from datetime import datetime
 
 import json
 import pandas as pd
+import pytz
 import requests
 import os
 
@@ -51,19 +52,19 @@ data = dict(sorted(data.items(), reverse=True))
 data_string = json.dumps(data)
 
 # add timestamp of latest data
-update_time = datetime.now().strftime('%Y-%m-%d %H:%M')
+update_time = datetime.now(pytz.timezone('America/Chicago')).strftime('%Y-%m-%d %H:%M')
 
 # append to existing, if exists
 # else, send new
 if file_exists:
   repo.update_file(path = repo_contents.path
-                   ,message = f'update - {update_time} UTC'\
+                   ,message = f'update - {update_time}'\
                    ,content = data_string
                    ,sha = repo_contents.sha
                    )
 else:
   repo.create_file(path = file_name
-                  ,message = f'start_upload - {update_time} UTC'\
+                  ,message = f'start_upload - {update_time}'\
                   ,content = data_string)
 
 # be polite, close your connection
