@@ -10,6 +10,7 @@ import os
 import requests
 import sys
 
+API_KEY = os.environ['API_KEY']
 
 
 def update_date_list(today, repo, date_contents, date_list, update_time):
