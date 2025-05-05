@@ -1,9 +1,6 @@
 name: print 'hello world'
 
 on:
-# 2025.05.04
-# commenting out on-demand, fingers crossed for scheduling
-#  workflow_dispatch
   schedule:
     - cron: '10 14 * * *'    # 8am local, 2pm UTC
     - cron: '10 18 * * *'    # noon local, 6pm UTC
