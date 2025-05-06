@@ -2,7 +2,7 @@ name: print 'hello world'
 
 on:
   schedule:
-    - cron: '10 15 * * *'    # 10am local, 2pm UTC
+    - cron: '10 16 * * *'    # 11am local, 2pm UTC
     - cron: '10 17 * * *'    # noon local, 6pm UTC
     - cron: '10 21 * * *'    # 4pm local, 10pm UTC
 
