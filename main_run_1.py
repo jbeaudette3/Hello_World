@@ -20,7 +20,7 @@ def update_date_list(today, repo, date_contents, date_list, update_time):
   : (returns nothing)
   '''
   # read data from github
-  date_list_name.remove(today)
+  date_list.remove(today)
   date_string = json.dumps(date_list_name)
 
   repo.update_file(path = date_contents.path
