@@ -67,7 +67,7 @@ def update_weather_data(repo, weather_list_name, weather_git_url, weather_site, 
                     ,sha = weather_contents.sha
                     )
   else:
-    repo.create_file(path = file_name
+    repo.create_file(path = weather_list_name
                     ,message = f'start_upload - {update_time}'\
                     ,content = weather_data_string)
 
