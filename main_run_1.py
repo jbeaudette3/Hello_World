@@ -86,8 +86,11 @@ if __name__ == '__main__':
 
   weather_site = 'https://data.cityofchicago.org/resource/k7hf-8y75.json?$select=measurement_timestamp,air_temperature&station_name=Foster%20Weather%20Station&$order=measurement_timestamp%20DESC&$limit=1'
 
-  # assumes the date list exists (currently not doing any checks, just assume)
-  date_list = requests.get(date_git_url).json()
+  # check if file exists
+  try:
+    date_list = requests.get(date_git_url).json()
+  else:
+    sys.exit()
 
   # login, get repo and info
   g = Github(auth=Auth.Token(API_KEY))
@@ -105,7 +108,7 @@ if __name__ == '__main__':
                      ,message = f'delete - {update_time}'\
                      ,sha = date_contents.sha
                      )
-    sys.quit()
+    sys.exit()
 
   if today in date_list:
     update_date_list(today = today,\
