@@ -89,7 +89,7 @@ if __name__ == '__main__':
   # check if file exists
   try:
     date_list = requests.get(date_git_url).json()
-  else:
+  except:
     sys.exit()
 
   # login, get repo and info
