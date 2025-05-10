@@ -78,10 +78,10 @@ if __name__ == '__main__':
   # initial variables
   main_url = 'https://raw.githubusercontent.com/jbeaudette3/Hello_World/refs/heads/main/'
 
-  date_list_name = 'list_1.json'
+  date_list_name = 'list_2.json'
   date_git_url = main_url + date_list_name
 
-  weather_list_name = 'weather_data_dict_1.json'
+  weather_list_name = 'weather_data_dict_2.json'
   weather_git_url = main_url + weather_list_name
 
   weather_site = 'https://data.cityofchicago.org/resource/k7hf-8y75.json?$select=measurement_timestamp,air_temperature&station_name=Foster%20Weather%20Station&$order=measurement_timestamp%20DESC&$limit=1'
